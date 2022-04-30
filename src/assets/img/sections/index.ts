@@ -11,6 +11,9 @@ export { default as Bot } from './home/botSymbol.svg';
 export { default as Bsc } from './home/bscSymbol.svg';
 export { default as Lock } from './home/lock.svg';
 
+// Swiper
+export { default as SliderArrow } from '../icons/arrow.svg';
+
 // Main
 export { default as LogoBotPlanet } from './home/logo-bot-planet.svg';
 

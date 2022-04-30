@@ -5,7 +5,7 @@ import { SwiperSlide } from 'swiper/react/swiper-react';
 import useMedia from 'use-media';
 import { v1 as uuid } from 'uuid';
 
-import { ArrowRight } from '@/assets/img/sections';
+import { SliderArrow } from '@/assets/img/sections';
 import { Button, ShadowTitle, Swiper } from '@/components/atoms';
 import { useMst } from '@/store';
 import { handleScrollTop } from '@/utils/scrollTop';
@@ -30,7 +30,7 @@ const Tables: FC = observer(() => {
                 onClick={handleScrollTop}
                 link="/farms"
                 colorScheme="icon"
-                icon={ArrowRight}
+                icon={SliderArrow}
               />
             </div>
 
@@ -87,7 +87,7 @@ const Tables: FC = observer(() => {
               <Button
                 link="/staking"
                 colorScheme="icon"
-                icon={ArrowRight}
+                icon={SliderArrow}
                 onClick={handleScrollTop}
                 linkClassName="btn-staking"
               />
