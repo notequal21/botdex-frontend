@@ -154,7 +154,15 @@ const Preview: VFC<{ priceBotData: PriceBotData | null }> = observer(({ priceBot
                 <SwiperSlide key={uuid()}>
                   <div className="h-preview_slides_top_item">
                     <a href={post_link} target="_blank" rel="noreferrer">
-                      <img src={image_link} alt="slide" />
+                      <span>
+                        <img src={image_link} alt="slide" />
+                      </span>
+                      <span>
+                        Benefits of using Binance Smart Chain over Ethereum for Bot Planet NFT.
+                      </span>
+                      <span>
+                        Read more
+                      </span>
                     </a>
                   </div>
                 </SwiperSlide>
@@ -163,7 +171,15 @@ const Preview: VFC<{ priceBotData: PriceBotData | null }> = observer(({ priceBot
                 <SwiperSlide key={uuid()}>
                   <div className="h-preview_slides_top_item">
                     <a href="https://google.com" target="_blank" rel="noreferrer">
-                      <img src={img} alt="slide" />
+                      <span>
+                        <img src={img} alt="slide" />
+                      </span>
+                      <span className="h-preview_slides_top_item-title">
+                        Benefits of using Binance Smart Chain over Ethereum for Bot Planet NFT.
+                      </span>
+                      <span className="h-preview_slides_top_item-more">
+                        Read more
+                      </span>
                     </a>
                   </div>
                 </SwiperSlide>

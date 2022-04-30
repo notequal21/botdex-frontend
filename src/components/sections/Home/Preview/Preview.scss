@@ -157,6 +157,18 @@
     width: 100%;
 
     &_top_item {
+      &-title {
+        display: block;
+        font-size: 19px;
+        font-weight: 500;
+        margin: 12px 0 4px;
+      }
+
+      &-more {
+        display: block;
+        color: #3162f6;
+      }
+
       a {
         img {
           width: 360px;
@@ -169,7 +181,8 @@
 
     &_body {
       max-width: 1100px;
-      height: 250px;
+      height: auto;
+      padding: 0 0 26px;
       @include m-left(70px);
       @include flex(row, center, flex-start, nowrap);
 
@@ -196,9 +209,19 @@
         @include flex(row, center, center);
       }
 
+      .swiper-button-prev {
+        top: auto;
+        bottom: 0;
+      }
+
+      .swiper-button-next {
+        top: auto;
+        bottom: 0;
+      }
+
       .swiper_btn_left {
         position: absolute;
-        top: 100px;
+        top: 36px;
         left: -10px;
 
         &:hover {
@@ -208,7 +231,7 @@
         }
 
         img {
-          transform: scale(-1) translateY(-50%);
+          transform: scale(-1) translateY(50%);
           width: 40px;
           position: absolute;
           top: 50%;
@@ -220,7 +243,7 @@
 
       .swiper_btn_right {
         position: absolute;
-        top: 100px;
+        top: -36px;
         right: 0;
 
         &:hover {
@@ -245,15 +268,15 @@
       }
 
       .swiper-wrapper {
-        height: 250px;
+        height: auto;
       }
 
       .swiper-container {
-        height: 250px;
+        height: auto;
       }
 
       .swiper-slide {
-        height: 250px;
+        height: auto;
 
         img {
           @include b(mobile) {
