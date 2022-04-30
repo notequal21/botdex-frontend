@@ -6,6 +6,7 @@ export { default as Slide1 } from './home/slide1.png';
 export { default as Slide2 } from './home/slide2.png';
 export { default as Slide3 } from './home/slide3.png';
 export { default as Calc } from './home/calc.svg';
+export { default as CalcWhite } from './home/calc_white.svg';
 export { default as Question } from './home/question.svg';
 export { default as Bot } from './home/botSymbol.svg';
 export { default as Bsc } from './home/bscSymbol.svg';
