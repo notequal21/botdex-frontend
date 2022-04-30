@@ -1,6 +1,7 @@
 @import '/src/styles/index';
 
 .features {
+  margin: 0 0 -1px;
   width: 100%;
   min-height: 100vh;
 
@@ -14,6 +15,7 @@
     width: 100%;
     @include m-left(70px);
     @include flex(row, center, flex-start, nowrap);
+
     @include b(mobile) {
       padding: 50px 0 150px;
     }
@@ -24,6 +26,7 @@
       width: 100%;
       max-width: 1100px;
       @include flex(column, center, center, nowrap);
+
       @include b(preTablet) {
         max-width: 600px;
       }
@@ -36,6 +39,7 @@
         width: 100%;
         grid-template-columns: repeat(3, 1fr);
         gap: 25px;
+
         @include b(preTablet) {
           @include flex(column, center, center, nowrap);
         }

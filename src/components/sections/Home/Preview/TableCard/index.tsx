@@ -73,7 +73,7 @@ const TableCard: FC<ITableCard> = ({ token0, token1, apy, content, className, id
       <Button
         link={content ? '/staking' : '/farms'}
         onClick={handleOpenStakingModal}
-        colorScheme="purple-light"
+        colorScheme="pink"
         size="sm"
         className="table-card_btn"
       >
