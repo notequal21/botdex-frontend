@@ -6,13 +6,15 @@
   width: 170px;
   height: 90px;
 
-  background: $bg-partners-card;
+  background-color: rgba(10, 0, 44, 0.9);
   border-radius: 12px;
   box-shadow: $bsh-partners-card;
   @include flex(row, center, center);
+
   @include b(preTablet) {
     margin: 0 auto;
   }
+
   @include b(mobile) {
     padding: 10px;
 

@@ -75,7 +75,7 @@ const TableCard: FC<ITableCard> = ({ token0, token1, apy, content, className, id
         onClick={handleOpenStakingModal}
         colorScheme="pink"
         size="sm"
-        className="table-card_btn"
+        className="table-card_btn btn-hover-down"
       >
         {content ? 'Start Staking' : 'Start Farm'}
       </Button>
