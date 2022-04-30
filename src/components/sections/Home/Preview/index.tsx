@@ -20,7 +20,7 @@ import ValueCard from './ValueCard';
 import './Preview.scss';
 import { IBlogType } from '@/types';
 import { getBlogs } from '@/utils/getBlogs';
-import { Comet, Alien } from '@/assets/img/sections';
+import { Comet, Alien, LogoBotPlanet } from '@/assets/img/sections';
 import { PriceBotData } from '@/hooks/useFetchPriceBot';
 
 const Preview: VFC<{ priceBotData: PriceBotData | null }> = observer(({ priceBotData }) => {
@@ -82,19 +82,29 @@ const Preview: VFC<{ priceBotData: PriceBotData | null }> = observer(({ priceBot
         <div className="h-preview_top">
           <div className="h-preview_top-left">
             <div className="h-preview_top-left-title">
-              <ShadowTitle type="h2" color="purple">
+              <div className="h-preview_top-left-title-img">
+                <img src={LogoBotPlanet} alt="Bot Planet’s" />
+              </div>
+              {/* <ShadowTitle type="h2" color="purple">
                 Bot Planet’s
-              </ShadowTitle>
-              <ShadowTitle type="h2">
-                Multichain DEX with quick and low-fee transactions
-              </ShadowTitle>
+              </ShadowTitle> */}
+              <span className="h-preview_top-left-title-span">
+                <ShadowTitle type="h2">
+                  Multichain DEX
+                </ShadowTitle>
+              </span>
+              <span className="h-preview_top-left-title-span">
+                <ShadowTitle type="h2">
+                  with quick and low-fee transactions
+                </ShadowTitle>
+              </span>
             </div>
             <div className="h-preview_top-left_subtitle">
               Use farming and staking as additional functions of our DEX.
             </div>
             <Button
               link="/trade/swap"
-              className="h-preview_top-left_btn"
+              className="h-preview_top-left_btn btn-hover-down"
               colorScheme="pink"
               size="sm"
             >
@@ -141,23 +151,23 @@ const Preview: VFC<{ priceBotData: PriceBotData | null }> = observer(({ priceBot
           >
             {blogs.length
               ? blogs.map(({ post_link, image_link }) => (
-                  <SwiperSlide key={uuid()}>
-                    <div className="h-preview_slides_top_item">
-                      <a href={post_link} target="_blank" rel="noreferrer">
-                        <img src={image_link} alt="slide" />
-                      </a>
-                    </div>
-                  </SwiperSlide>
-                ))
+                <SwiperSlide key={uuid()}>
+                  <div className="h-preview_slides_top_item">
+                    <a href={post_link} target="_blank" rel="noreferrer">
+                      <img src={image_link} alt="slide" />
+                    </a>
+                  </div>
+                </SwiperSlide>
+              ))
               : slides.map(({ img }) => (
-                  <SwiperSlide key={uuid()}>
-                    <div className="h-preview_slides_top_item">
-                      <a href="https://google.com" target="_blank" rel="noreferrer">
-                        <img src={img} alt="slide" />
-                      </a>
-                    </div>
-                  </SwiperSlide>
-                ))}
+                <SwiperSlide key={uuid()}>
+                  <div className="h-preview_slides_top_item">
+                    <a href="https://google.com" target="_blank" rel="noreferrer">
+                      <img src={img} alt="slide" />
+                    </a>
+                  </div>
+                </SwiperSlide>
+              ))}
           </Swiper>
         </div>
       </div>
