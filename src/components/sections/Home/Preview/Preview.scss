@@ -189,8 +189,13 @@
       @include b(preTablet) {
         margin: 0 auto;
 
-        max-width: 350px;
+        // max-width: 350px;
+        max-width: 730px;
         @include flex(row, center, center, nowrap);
+
+        .swiper-wrapper {
+          max-width: 730px;
+        }
       }
 
       @include b(mobile) {

@@ -68,7 +68,7 @@ const Header: React.FC = observer(() => {
           </a>
         </div>
         <Button className="header__connect_btn" colorScheme="blue" size="sm" onClick={connect}>
-          <span className="text-bold">Connect Wallet</span>
+          <span className="text-500">Connect Wallet</span>
         </Button>
         {/* {!user.address ? (
           <Button className="header__connect_btn" colorScheme="blue" size="sm" onClick={connect}>
@@ -103,7 +103,7 @@ const Header: React.FC = observer(() => {
               onClick={connect}
             >
               <WalletImg />
-              <span className="text-bold">Connect Wallet</span>
+              <span className="text-500">Connect Wallet</span>
             </Button>
           ) : (
             <Button

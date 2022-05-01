@@ -16,7 +16,8 @@
 
   @include b(tablet) {
     min-width: 175px;
-    height: 80px;
+    width: 100%;
+    height: 85px;
   }
 
   @media (max-width: 380px) {

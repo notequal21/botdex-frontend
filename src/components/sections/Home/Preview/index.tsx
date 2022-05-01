@@ -26,6 +26,7 @@ import { PriceBotData } from '@/hooks/useFetchPriceBot';
 const Preview: VFC<{ priceBotData: PriceBotData | null }> = observer(({ priceBotData }) => {
   const { pairs } = useMst();
   const isWide = useMedia({ minWidth: '1412px' });
+  const isMobile = useMedia({ minWidth: '769px' });
 
   const [data, setData] = useState(pairs.getFormattedPoints());
   const [reversed, setReversed] = useState(false);
@@ -140,7 +141,7 @@ const Preview: VFC<{ priceBotData: PriceBotData | null }> = observer(({ priceBot
         </div>
         <div className="h-preview_slides">
           <Swiper
-            slidesPerView={isWide ? 3 : 1}
+            slidesPerView={isWide ? 3 : isMobile ? 2 : 1}
             spaceBetween={10}
             className="h-preview_slides_body"
             keyboard

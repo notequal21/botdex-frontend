@@ -11,17 +11,17 @@
   @include flex(row, center, space-between, nowrap);
 
   @include b(tablet) {
-    padding: 26px 2px 26px 20px;
+    // padding: 26px 2px 26px 20px;
 
-    width: 95%;
+    // width: 95%;
   }
 
   @include b(mobile) {
-    padding: 10px;
+    // padding: 10px;
 
-    height: 140px;
-    @include flex(column, flex-start, center, nowrap);
-    gap: 5px;
+    // height: 140px;
+    // @include flex(column, flex-start, center, nowrap);
+    // gap: 5px;
   }
 
   &_name {
@@ -124,9 +124,9 @@
     max-height: 38px !important;
 
     @include b(tablet) {
-      position: absolute;
-      right: 3px;
-      bottom: 20px;
+      // position: absolute;
+      // right: 3px;
+      // bottom: 20px;
     }
 
     span {

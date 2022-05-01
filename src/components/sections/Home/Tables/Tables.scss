@@ -49,7 +49,7 @@
         @include b(tablet) {
           padding: 0;
 
-          height: 90px;
+          // height: 90px;
         }
 
         @include b(mobile) {
@@ -57,7 +57,7 @@
 
           width: 100%;
           max-width: 100% !important;
-          height: 140px;
+          // height: 140px;
         }
       }
 
@@ -65,7 +65,11 @@
         @include flex(column, center, center, nowrap);
 
         @include b(tablet) {
-          width: 95%;
+          width: 100%;
+
+          a {
+            padding: 0 10px 0 0;
+          }
         }
 
         &-table {
@@ -81,14 +85,15 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
             @include b(tablet) {
-              max-width: 95%;
+              max-width: 100%;
+              padding: 0 10px 0 20px !important;
 
               height: 90px;
             }
 
             @include b(mobile) {
               // padding: 10px !important;
-              height: 140px;
+              // height: 140px;
             }
 
             &:last-child {
@@ -111,6 +116,10 @@
             background: $bg-table;
             border-radius: 12px;
             box-shadow: $bsh-table;
+
+            @include b(mobile) {
+              max-width: 100%;
+            }
 
             &:not(:last-child) {
               margin-bottom: 30px;

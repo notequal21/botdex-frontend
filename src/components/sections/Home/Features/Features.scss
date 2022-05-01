@@ -31,6 +31,10 @@
         max-width: 600px;
       }
 
+      @include b(tablet) {
+        max-width: 700px;
+      }
+
       &_cards {
         margin-top: 20px;
 
@@ -42,6 +46,10 @@
 
         @include b(preTablet) {
           @include flex(column, center, center, nowrap);
+        }
+
+        @include b(tablet) {
+          @include flex(row, center, center, wrap);
         }
       }
     }
