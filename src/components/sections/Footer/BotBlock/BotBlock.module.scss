@@ -93,8 +93,11 @@
     // @include flex(row, center, center, nowrap);
 
     @include b(tablet) {
-      width: 135px;
-      height: 30px;
+
+      span {
+        width: 135px !important;
+        height: 30px !important;
+      }
     }
 
     &HoverDown {
