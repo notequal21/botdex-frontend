@@ -12,6 +12,10 @@
     min-height: auto;
   }
 
+  @include b(mobile) {
+    padding: 50px 22px 130px;
+  }
+
   background: linear-gradient(0deg, #110847 0%, rgba(17, 8, 71, 0) 89.36%) bottom/100% 148px no-repeat,
   url(../../../../assets/img/sections/home/preview-bg-second.png) bottom/100% auto no-repeat,
   #110847 center/cover no-repeat;
@@ -38,7 +42,7 @@
       }
 
       @include b(mobile) {
-        max-width: 90%;
+        max-width: 100%;
       }
 
       &_earn-table,
@@ -92,8 +96,12 @@
             }
 
             @include b(mobile) {
-              // padding: 10px !important;
-              // height: 140px;
+              padding: 10px !important;
+              height: 140px;
+
+              .table-card_btn {
+                right: 17px;
+              }
             }
 
             &:last-child {
@@ -151,6 +159,14 @@
       &_title {
         width: 100%;
         @include flex(row, flex-start, space-between, nowrap);
+
+        @include b(mobile) {
+          a {
+            &.btn-link {
+              padding: 0;
+            }
+          }
+        }
 
         button {
           &:hover {

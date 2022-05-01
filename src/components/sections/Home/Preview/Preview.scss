@@ -12,6 +12,11 @@
     @include flex(column, center, center, nowrap);
   }
 
+  @include b(mobile) {
+    padding: 153px 22px 0;
+    @include flex(column, center, center, nowrap);
+  }
+
   background: linear-gradient(0deg, #110847 0%, rgba(17, 8, 71, 0) 89.36%) bottom/100% 148px no-repeat,
   url(../../../../assets/img/sections/home/preview-bg.png) center/cover no-repeat;
 
@@ -29,6 +34,10 @@
     &-left {
       @include b(preTablet) {
         padding: 0 5px;
+      }
+
+      @include b(mobile) {
+        padding: 0;
       }
 
       &-title {
@@ -71,6 +80,10 @@
         @include b(preTablet) {
           padding: 0 5px;
         }
+
+        @include b(mobile) {
+          padding: 0;
+        }
       }
 
       &_btn {
@@ -85,6 +98,10 @@
         width: 100%;
         gap: 30px;
         @include flex(row, center, space-between, nowrap);
+
+        @include b(mobile) {
+          gap: 20px;
+        }
 
         @media (max-width: 380px) {
           @include flex(column, center, center, nowrap);

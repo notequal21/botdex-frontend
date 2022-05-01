@@ -142,6 +142,10 @@ main {
 
   max-width: 1120px;
 
+  @include b(mobile) {
+    padding: 0 22px;
+  }
+
   &-md {
     max-width: 990px;
   }

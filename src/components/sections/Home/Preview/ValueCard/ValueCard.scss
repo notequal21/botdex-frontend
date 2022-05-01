@@ -20,6 +20,10 @@
     height: 85px;
   }
 
+  @include b(mobile) {
+    min-width: 150px;
+  }
+
   @media (max-width: 380px) {
     @include flex(row, center, flex-start, nowrap);
     min-width: 97%;

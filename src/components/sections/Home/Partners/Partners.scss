@@ -12,6 +12,11 @@
     url(../../../../assets/img/sections/home/partners-bg.png) bottom/contain no-repeat,
     #110847 center;
 
+  @include b(mobile) {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
   &_body {
     margin: 0 auto;
 
@@ -154,7 +159,7 @@
           }
 
           @include b(mobile) {
-            padding: 0 5px;
+            padding: 0;
 
             display: grid;
             grid-template-columns: repeat(3, 1fr);

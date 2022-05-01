@@ -34,6 +34,10 @@
     padding: 0 10px;
 
     width: 100%;
+
+    @include b(mobile) {
+      padding: 0 22px;
+    }
   }
 
   @include flexbox(center);

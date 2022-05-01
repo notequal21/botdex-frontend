@@ -17,11 +17,11 @@
   }
 
   @include b(mobile) {
-    // padding: 10px;
+    padding: 10px;
 
-    // height: 140px;
-    // @include flex(column, flex-start, center, nowrap);
-    // gap: 5px;
+    height: 140px;
+    @include flex(column, flex-start, center, nowrap);
+    gap: 5px;
   }
 
   &_name {
@@ -123,10 +123,10 @@
     min-width: 115px;
     max-height: 38px !important;
 
-    @include b(tablet) {
-      // position: absolute;
-      // right: 3px;
-      // bottom: 20px;
+    @include b(mobile) {
+      position: absolute;
+      right: 3px;
+      bottom: 20px;
     }
 
     span {

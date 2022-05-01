@@ -17,7 +17,7 @@
     @include flex(row, center, flex-start, nowrap);
 
     @include b(mobile) {
-      padding: 50px 0 150px;
+      padding: 50px 22px 150px;
     }
 
     &_content {
