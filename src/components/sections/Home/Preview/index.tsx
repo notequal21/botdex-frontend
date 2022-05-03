@@ -91,6 +91,16 @@ const Preview: VFC<{ priceBotData: PriceBotData | null }> = observer(({ priceBot
               </ShadowTitle> */}
               <span className="h-preview_top-left-title-span">
                 <ShadowTitle type="h2">
+                  Profit and Freedom for Crypto World
+                </ShadowTitle>
+              </span>
+              <span className="h-preview_top-left-title-span big">
+                <ShadowTitle type="h2">
+                  BotSwap: Dive deeper into DeFi with BOT Planet!
+                </ShadowTitle>
+              </span>
+              {/* <span className="h-preview_top-left-title-span">
+                <ShadowTitle type="h2">
                   Multichain DEX
                 </ShadowTitle>
               </span>
@@ -98,16 +108,30 @@ const Preview: VFC<{ priceBotData: PriceBotData | null }> = observer(({ priceBot
                 <ShadowTitle type="h2">
                   with quick and low-fee transactions
                 </ShadowTitle>
-              </span>
+              </span> */}
             </div>
             <div className="h-preview_top-left_subtitle">
-              Use farming and staking as additional functions of our DEX.
+              Discover the next level of Farming and Staking on BotSwap!
             </div>
+            <ul>
+              <li>
+                Discover the next level of Farming and Staking on BotSwap!
+              </li>
+              <li>
+                Staking Fixed Interest Staking APY up to 120%
+              </li>
+              <li>
+                Farming  Farm season with high yield
+              </li>
+              <li>
+                NFT Staking Stake your NFT and get a huge gaming experience!
+              </li>
+            </ul>
             <Button
               link="/trade/swap"
               className="h-preview_top-left_btn btn-hover-down"
               colorScheme="pink"
-              size="sm"
+              size="smd"
             >
               Trade Now
             </Button>

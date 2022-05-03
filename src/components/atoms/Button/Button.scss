@@ -450,5 +450,28 @@ $text-default: #fff;
         }
       }
     }
+
+    &.btn-smd {
+      padding: 0 !important;
+      background: transparent;
+      border-radius: unset;
+      box-shadow: none;
+
+      >span {
+        &:first-child {
+          padding: 15px 20px;
+          border-radius: 11px;
+        }
+      }
+
+      &:hover {
+        >span {
+          &:first-child {
+            transform: translateY(4px);
+            box-shadow: none;
+          }
+        }
+      }
+    }
   }
 }

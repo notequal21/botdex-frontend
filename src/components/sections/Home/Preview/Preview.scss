@@ -55,7 +55,9 @@
         &-span {
           &:nth-of-type(1) {
             margin: 10px 0 15px;
+          }
 
+          &.big {
             h2 {
               font-size: 37px !important;
               line-height: 40.2856px !important;
@@ -64,7 +66,7 @@
         }
 
         @include b(preTablet) {
-          max-width: 290px;
+          // max-width: 290px;
 
           h2 {
             text-align: left;
@@ -83,6 +85,31 @@
 
         @include b(mobile) {
           padding: 0;
+        }
+      }
+
+      ul {
+        margin: 0 0 20px;
+
+        li {
+          display: flex;
+          align-items: center;
+          margin: 3px 0 0;
+          position: relative;
+          padding: 0 0 0 10px;
+
+          &::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $c-text-purple;
+            margin: 0;
+            position: absolute;
+            top: 6px;
+            left: 0;
+          }
         }
       }
 
