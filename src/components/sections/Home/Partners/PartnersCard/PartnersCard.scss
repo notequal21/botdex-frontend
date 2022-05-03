@@ -11,6 +11,11 @@
   box-shadow: $bsh-partners-card;
   @include flex(row, center, center);
 
+  @media (min-width: 2100px) {
+    width: 247px;
+    height: 130px;
+  }
+
   @include b(preTablet) {
     margin: 0 auto;
   }

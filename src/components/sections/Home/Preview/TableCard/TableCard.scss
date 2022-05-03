@@ -10,6 +10,11 @@
 
   @include flex(row, center, space-between, nowrap);
 
+  // @media (min-width: 1921px) {
+  //   max-width: 100%;
+  //   width: 100%;
+  // }
+
   @include b(tablet) {
     // padding: 26px 2px 26px 20px;
 

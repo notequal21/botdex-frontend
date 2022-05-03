@@ -25,6 +25,18 @@
 
     @include flex(column, flex-start, center);
 
+    @media (min-width: 1921px) {
+      max-width: 1400px;
+    }
+
+    @media (min-width: 2000px) {
+      max-width: 1500px;
+    }
+
+    @media (min-width: 2100px) {
+      max-width: 1600px;
+    }
+
     @include b(preTablet) {
       @include flex(column, center, center);
       max-width: 600px;
@@ -37,6 +49,20 @@
       @include m-left(70px);
       @include flex(row, flex-start, space-between, nowrap);
       gap: 65px;
+
+      @media (min-width: 1921px) {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0;
+      }
+
+      @media (min-width: 2000px) {
+        max-width: 1500px;
+      }
+
+      @media (min-width: 2100px) {
+        max-width: 1600px;
+      }
 
       @include b(preTablet) {
         @include flex(column, center, center);
@@ -73,6 +99,10 @@
         max-width: 600px;
         @include flex(row, center, center, nowrap);
 
+        @media (min-width: 2100px) {
+          max-width: 890px;
+        }
+
         @include b(preTablet) {
           max-width: 610px;
           @include flex(column, center, center);
@@ -85,6 +115,10 @@
         .swiper-wrapper {
           max-width: 600px;
           max-height: 250px;
+
+          @media (min-width: 2100px) {
+            max-width: 890px;
+          }
 
           @include b(preTablet) {
             margin: 0 auto;
@@ -134,6 +168,10 @@
         @include m-left(70px);
         @include flex(column, flex-start, center);
 
+        @media (min-width: 1921px) {
+          margin: 0;
+        }
+
         @include b(preTablet) {
           @include flex(row, center, center, wrap);
         }
@@ -150,6 +188,10 @@
           display: grid;
           grid-template-columns: repeat(6, 1fr);
           gap: 10px;
+
+          @media (min-width: 1921px) {
+            width: 100%;
+          }
 
           @include b(preTablet) {
             margin: 0 auto;

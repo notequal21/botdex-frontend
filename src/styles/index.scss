@@ -142,6 +142,18 @@ main {
 
   max-width: 1120px;
 
+  @media (min-width: 1921px) {
+    max-width: 1420px;
+  }
+
+  @media (min-width: 2000px) {
+    max-width: 1520px;
+  }
+
+  @media (min-width: 2100px) {
+    max-width: 1620px;
+  }
+
   @include b(mobile) {
     padding: 0 22px;
   }

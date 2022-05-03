@@ -35,6 +35,18 @@
 
     width: 100%;
 
+    @media (min-width: 1921px) {
+      max-width: 1400px;
+    }
+
+    @media (min-width: 2000px) {
+      max-width: 1500px;
+    }
+
+    @media (min-width: 2100px) {
+      max-width: 1600px;
+    }
+
     @include b(mobile) {
       padding: 0 22px;
     }
@@ -44,6 +56,10 @@
 
   &__content {
     width: 420px;
+
+    @media (min-width: 2100px) {
+      width: 610px;
+    }
 
     @include b(tablet) {
       width: 100%;
@@ -56,6 +72,19 @@
     max-width: 1100px;
     @include flex(row, flex-start, center, nowrap);
 
+
+    @media (min-width: 1921px) {
+      max-width: 1400px;
+    }
+
+    @media (min-width: 2000px) {
+      max-width: 1500px;
+    }
+
+    @media (min-width: 2100px) {
+      max-width: 1600px;
+    }
+
     @include b(tablet) {
       @include flex(column, center, center, nowrap);
     }
@@ -66,6 +95,10 @@
 
     width: 670px;
     height: fit-content;
+
+    @media (min-width: 2100px) {
+      width: 970px;
+    }
 
     @include b(tablet) {
       margin-top: 10px;

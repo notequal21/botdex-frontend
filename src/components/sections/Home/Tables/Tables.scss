@@ -27,12 +27,29 @@
     max-width: 1100px;
     @include flex(row, center, flex-start);
 
+    @media (min-width: 1921px) {
+      max-width: 1400px;
+    }
+
+    @media (min-width: 2000px) {
+      max-width: 1500px;
+    }
+
+    @media (min-width: 2100px) {
+      max-width: 1600px;
+    }
+
     &_content {
       gap: 30px;
 
       @include m-left(70px);
 
       @include flex(row, flex-start, space-between, nowrap);
+
+      @media (min-width:1921px) {
+        width: 100%;
+        margin: 0;
+      }
 
       @include b(preTablet) {
         margin: 0 auto;
@@ -49,6 +66,11 @@
       &_staking-table {
         margin-top: 27px;
         padding: 0 20px;
+
+        @media (min-width: 1921px) {
+          width: 100%;
+          max-width: 100% !important;
+        }
 
         @include b(tablet) {
           padding: 0;
@@ -67,6 +89,10 @@
 
       &_earn {
         @include flex(column, center, center, nowrap);
+
+        @media (min-width:1921px) {
+          width: 50%;
+        }
 
         @include b(tablet) {
           width: 100%;
@@ -87,6 +113,11 @@
             max-width: 490px;
 
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+            @media (min-width: 1921px) {
+              width: 100%;
+              max-width: 100% !important;
+            }
 
             @include b(tablet) {
               max-width: 100%;
@@ -115,6 +146,10 @@
         width: 100%;
         @include flex(column, center, flex-end, nowrap);
 
+        @media (min-width:1921px) {
+          width: 50%;
+        }
+
         &-table {
           padding: 0;
 
@@ -124,6 +159,11 @@
             background: $bg-table;
             border-radius: 12px;
             box-shadow: $bsh-table;
+
+            @media (min-width: 1921px) {
+              width: 100%;
+              max-width: 100% !important;
+            }
 
             @include b(mobile) {
               max-width: 100%;

@@ -25,6 +25,18 @@
 
     width: 100%;
     max-width: 1100px;
+
+    @media (min-width: 1921px) {
+      max-width: 1400px;
+    }
+
+    @media (min-width: 2000px) {
+      max-width: 1500px;
+    }
+
+    @media (min-width: 2100px) {
+      max-width: 1600px;
+    }
   }
 
   &_top {
@@ -43,6 +55,10 @@
       &-title {
         max-width: 500px;
         @include flex(row, center, space-between, wrap);
+
+        @media (min-width: 1921px) {
+          max-width: 740px;
+        }
 
         &-img {
           width: 100%;
@@ -126,6 +142,10 @@
         gap: 30px;
         @include flex(row, center, space-between, nowrap);
 
+        @media (min-width: 1921px) {
+          max-width: 510px;
+        }
+
         @include b(mobile) {
           gap: 20px;
         }
@@ -141,6 +161,11 @@
       width: 530px;
       height: 330px;
       @include flex(column, center, space-between);
+
+      @media (min-width: 1921px) {
+        width: 770px;
+        height: 492px;
+      }
 
       @include b(preTablet) {
         height: 340px;
@@ -190,6 +215,10 @@
     @include m-left(70px);
     @include flex(row, center, space-between, nowrap);
 
+    @media (min-width: 1921px) {
+      margin: 0;
+    }
+
     @include b(preTablet) {
       @include flex(column, center, center);
     }
@@ -219,6 +248,11 @@
           height: 197px;
 
           border-radius: 12px;
+
+          @media (min-width: 1921px) {
+            width: 392.5px;
+            height: 211px;
+          }
         }
       }
     }
@@ -229,6 +263,15 @@
       padding: 0 0 26px;
       @include m-left(70px);
       @include flex(row, center, flex-start, nowrap);
+
+      @media (min-width: 1921px) {
+        margin: 0;
+        max-width: 100%;
+
+        .swiper-wrapper {
+          max-width: 100%;
+        }
+      }
 
       @include b(preTablet) {
         margin: 0 auto;
