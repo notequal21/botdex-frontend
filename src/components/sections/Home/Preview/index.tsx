@@ -97,7 +97,7 @@ const Preview: VFC<{ priceBotData: PriceBotData | null }> = observer(({ priceBot
               </span>
               <span className="h-preview_top-left-title-span big">
                 <ShadowTitle type="h2">
-                  BotSwap: Dive deeper into DeFi with BOT Planet!
+                  BOTSWAP: Dive deeper into the Crypto World
                 </ShadowTitle>
               </span>
               {/* <span className="h-preview_top-left-title-span">
@@ -114,20 +114,6 @@ const Preview: VFC<{ priceBotData: PriceBotData | null }> = observer(({ priceBot
             <div className="h-preview_top-left_subtitle">
               Discover the next level of Farming and Staking on BotSwap!
             </div>
-            <ul>
-              <li>
-                Discover the next level of Farming and Staking on BotSwap!
-              </li>
-              <li>
-                Staking Fixed Interest Staking APY up to 120%
-              </li>
-              <li>
-                Farming  Farm season with high yield
-              </li>
-              <li>
-                NFT Staking Stake your NFT and get a huge gaming experience!
-              </li>
-            </ul>
             <Button
               link="/trade/swap"
               className="h-preview_top-left_btn btn-hover-down"
