@@ -17,6 +17,7 @@ import { useMst } from '@/store';
 import { addressWithDots } from '@/utils/formatters';
 
 import './Header.scss';
+// import { useSmoothTopScroll } from '@/hooks/useSmoothTopScroll';
 
 const Header: React.FC = observer(() => {
   const { pathname } = useLocation();
@@ -28,9 +29,14 @@ const Header: React.FC = observer(() => {
   const { user } = useMst();
   const { connect } = useWalletConnectorContext();
   const location = useLocation();
+  // useSmoothTopScroll();
 
   const handleToggleSidebar = React.useCallback(() => {
     setIsBurger(!isBurger);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }, [isBurger]);
   const handleClose = () => {
     setIsBurger(false);

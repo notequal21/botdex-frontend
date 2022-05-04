@@ -74,7 +74,7 @@ const Menu: React.FC<IMenuProps> = observer(({ onClick }) => {
     },
     {
       text: 'Bridge',
-      link: '/coming-soon/bridge',
+      link: '/trade/bridge',
       img: BridgeImg,
     },
     {
@@ -163,7 +163,7 @@ const Menu: React.FC<IMenuProps> = observer(({ onClick }) => {
             </NavLink>
           ))}
           <div
-            onKeyDown={() => {}}
+            onKeyDown={() => { }}
             role="button"
             tabIndex={0}
             className="menu__nav-item"
