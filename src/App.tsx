@@ -10,22 +10,8 @@ import ProgressLoader from './components/atoms/ProgressLoader';
 import { MetamaskErrModal, RoiModal } from './components/molecules';
 import { CookiesWarn } from './components/organisms';
 import BotBlock from './components/sections/Footer/BotBlock';
-import { useSmoothTopScroll } from './hooks/useSmoothTopScroll';
-// import {
-//   ComingSoonPage,
-//   // CollectiblesPage,
-//   // DaoListPage,
-//   // DaoPage,
-//   // DaoProposalPage,
-//   FarmsPage,
-//   HomePage,
-//   // LotteryPage,
-//   PoolsPage,
-//   // TeamPage,
-//   // TeamsPage,
-//   TradePage,
-// } from './pages';
 import HomePage from './pages/Home';
+import { useSmoothTopScroll } from './hooks/useSmoothTopScroll';
 import { useMst } from './store';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -36,7 +22,6 @@ const ComingSoonPage: any = lazy((): any => import('./pages/ComingSoon'));
 const FarmsPage: any = lazy((): any => import('./pages/Farms'));
 const PoolsPage: any = lazy((): any => import('./pages/Pools'));
 const TradePage: any = lazy((): any => import('./pages/Trade'));
-// const HomePage: any = lazy((): any => import('./pages/Home'));
 
 const progressPoints = [
   {
@@ -104,9 +89,10 @@ const App: React.FC = observer(() => {
         {isLoadingApp && <ProgressLoader progress={progressLoading} />}
         <div className="bg" />
         <Header />
-        <Suspense fallback=".">
+        <Suspense fallback="">
           <Switch>
             <Route exact path="/" render={() => <HomePage isLoaded={isLoadingApp} priceBotData={priceBotData} />} />
+            {/* <Route exact path="/" render={() => <HomePage priceBotData={priceBotData} />} /> */}
             <Route
               exact
               path={[
