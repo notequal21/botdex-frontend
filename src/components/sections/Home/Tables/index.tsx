@@ -1,10 +1,12 @@
 /* eslint-disable */
-import { FC } from 'react';
+import { FC, Fragment } from 'react';
 import { observer } from 'mobx-react-lite';
+import { SwiperSlide } from 'swiper/react/swiper-react';
+import useMedia from 'use-media';
 import { v1 as uuid } from 'uuid';
 
-import { SliderArrow } from '@/assets/img/sections';
-import { Button, ShadowTitle } from '@/components/atoms';
+import { ArrowRight } from '@/assets/img/sections';
+import { Button, ShadowTitle, Swiper } from '@/components/atoms';
 import { useMst } from '@/store';
 import { handleScrollTop } from '@/utils/scrollTop';
 
@@ -15,6 +17,7 @@ import './Tables.scss';
 
 const Tables: FC = observer(() => {
   const { farms } = useMst();
+  const isNarrow = useMedia({ maxWidth: '1024px' });
 
   return (
     <div className="preview-tables">
@@ -27,28 +30,56 @@ const Tables: FC = observer(() => {
                 onClick={handleScrollTop}
                 link="/farms"
                 colorScheme="icon"
-                icon={SliderArrow}
+                icon={ArrowRight}
               />
             </div>
 
-            <div className="preview-tables_body_content_earn-table">
-              {farms.data.length &&
-                farms.data.map(({ token, quoteToken }, index) => {
-                  if (index > 1) {
-                    return (
-                      <TableCard
-                        key={uuid()}
-                        id={index}
-                        token0={{ symbol: token.symbol, img: token.logoURI }}
-                        token1={{ symbol: quoteToken.symbol, img: quoteToken.logoURI }}
-                        apy="25"
-                        className="preview-tables_body_content_earn-table_item"
-                      />
-                    );
-                  }
-                  return '';
-                })}
-            </div>
+            {isNarrow ? (
+              <Swiper
+                className="preview-tables_body_content_earn-table"
+                allowTouchMove
+                keyboard
+                spaceBetween={10}
+                slidesPerView={1}
+              >
+                {farms.data.length &&
+                  farms.data.map(({ token, quoteToken }, index) => {
+                    if (index > 1) {
+                      return (
+                        <SwiperSlide key={uuid()}>
+                          <TableCard
+                            id={index}
+                            token0={{ symbol: token.symbol, img: token.logoURI }}
+                            token1={{ symbol: quoteToken.symbol, img: quoteToken.logoURI }}
+                            apy="25"
+                            className="preview-tables_body_content_earn-table_item"
+                          />
+                        </SwiperSlide>
+                      );
+                    }
+                    return <Fragment key={uuid()} />;
+                  })}
+              </Swiper>
+            ) : (
+              <div className="preview-tables_body_content_earn-table">
+                {farms.data.length &&
+                  farms.data.map(({ token, quoteToken }, index) => {
+                    if (index > 1) {
+                      return (
+                        <TableCard
+                          key={uuid()}
+                          id={index}
+                          token0={{ symbol: token.symbol, img: token.logoURI }}
+                          token1={{ symbol: quoteToken.symbol, img: quoteToken.logoURI }}
+                          apy="25"
+                          className="preview-tables_body_content_earn-table_item"
+                        />
+                      );
+                    }
+                    return null;
+                  })}
+              </div>
+            )}
           </div>
           <div className="preview-tables_body_content_staking">
             <div className="preview-tables_body_content_title">
@@ -56,25 +87,49 @@ const Tables: FC = observer(() => {
               <Button
                 link="/staking"
                 colorScheme="icon"
-                icon={SliderArrow}
+                icon={ArrowRight}
                 onClick={handleScrollTop}
                 linkClassName="btn-staking"
               />
             </div>
 
-            <div className="preview-tables_body_content_staking-table">
-              {stakingItems.map(({ content, apy }, index) => {
-                return (
-                  <TableCard
-                    key={uuid()}
-                    id={index}
-                    content={content}
-                    apy={apy}
-                    className="preview-tables_body_content_staking-table_item"
-                  />
-                );
-              })}
-            </div>
+            {isNarrow ? (
+              <Swiper
+                className="preview-tables_body_content_staking-table"
+                allowTouchMove
+                keyboard
+                spaceBetween={10}
+                slidesPerView={1}
+              >
+                {stakingItems.map(({ content, apy }, index) => {
+                  return (
+                    <SwiperSlide>
+                      <TableCard
+                        key={uuid()}
+                        id={index}
+                        content={content}
+                        apy={apy}
+                        className="preview-tables_body_content_staking-table_item"
+                      />
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            ) : (
+              <div className="preview-tables_body_content_staking-table">
+                {stakingItems.map(({ content, apy }, index) => {
+                  return (
+                    <TableCard
+                      key={uuid()}
+                      id={index}
+                      content={content}
+                      apy={apy}
+                      className="preview-tables_body_content_staking-table_item"
+                    />
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
       </div>

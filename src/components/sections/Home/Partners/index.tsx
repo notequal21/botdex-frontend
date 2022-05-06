@@ -12,8 +12,7 @@ import PartnersCard from './PartnersCard';
 import './Partners.scss';
 
 const Partners: FC = () => {
-  const isMomile = useMedia({ minWidth: '769px' });
-  const isUltraWide = useMedia({ minWidth: '2100px' });
+  const isWide = useMedia({ minWidth: '1412px' });
 
   return (
     <div className="partners">
@@ -28,7 +27,7 @@ const Partners: FC = () => {
 
           <Swiper
             spaceBetween={10}
-            slidesPerView={isUltraWide ? 3 : isMomile ? 2 : 1}
+            slidesPerView={isWide ? 2 : 1}
             keyboard
             nav
             loop

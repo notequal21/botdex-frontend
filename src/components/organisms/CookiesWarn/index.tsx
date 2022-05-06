@@ -39,10 +39,8 @@ const CookiesWarn: VFC<ICookiesWarn> = ({ onAccept }) => {
           </ul>
         </div>
         <div className={s.container_btn}>
-          <Button className="btn-hover-down" colorScheme="pink" size="smd" onClick={onAccept}>
-            <span>
-              Accept
-            </span>
+          <Button colorScheme="pink" size="smd" onClick={onAccept}>
+            Accept
           </Button>
         </div>
       </div>

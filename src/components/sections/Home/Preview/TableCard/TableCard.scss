@@ -10,17 +10,11 @@
 
   @include flex(row, center, space-between, nowrap);
 
-  // @media (min-width: 1921px) {
-  //   max-width: 100%;
-  //   width: 100%;
-  // }
-
   @include b(tablet) {
-    // padding: 26px 2px 26px 20px;
+    padding: 26px 2px 26px 20px;
 
-    // width: 95%;
+    width: 95%;
   }
-
   @include b(mobile) {
     padding: 10px;
 
@@ -31,7 +25,6 @@
 
   &_name {
     @include flex(row, center, space-between, nowrap);
-
     // @include b(tablet) {
     //   padding-left: 20px;
     // }
@@ -115,7 +108,7 @@
       font-weight: 700;
       line-height: 22.5px;
 
-      color: $white;
+      color: $c-text-purple;
       @include flex(row, center, flex-start);
     }
 
@@ -127,8 +120,7 @@
   &_btn {
     min-width: 115px;
     max-height: 38px !important;
-
-    @include b(mobile) {
+    @include b(tablet) {
       position: absolute;
       right: 3px;
       bottom: 20px;

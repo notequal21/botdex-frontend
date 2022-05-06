@@ -20,14 +20,12 @@ import ValueCard from './ValueCard';
 import './Preview.scss';
 import { IBlogType } from '@/types';
 import { getBlogs } from '@/utils/getBlogs';
-import { Comet, Alien, LogoBotPlanet } from '@/assets/img/sections';
+import { Comet, Alien } from '@/assets/img/sections';
 import { PriceBotData } from '@/hooks/useFetchPriceBot';
 
 const Preview: VFC<{ priceBotData: PriceBotData | null }> = observer(({ priceBotData }) => {
   const { pairs } = useMst();
   const isWide = useMedia({ minWidth: '1412px' });
-  const isMobile = useMedia({ minWidth: '769px' });
-  const isUltraWide = useMedia({ minWidth: '2100px' });
 
   const [data, setData] = useState(pairs.getFormattedPoints());
   const [reversed, setReversed] = useState(false);
@@ -84,41 +82,21 @@ const Preview: VFC<{ priceBotData: PriceBotData | null }> = observer(({ priceBot
         <div className="h-preview_top">
           <div className="h-preview_top-left">
             <div className="h-preview_top-left-title">
-              <div className="h-preview_top-left-title-img">
-                <img src={LogoBotPlanet} alt="Bot Planet’s" />
-              </div>
-              {/* <ShadowTitle type="h2" color="purple">
+              <ShadowTitle type="h2" color="purple">
                 Bot Planet’s
-              </ShadowTitle> */}
-              <span className="h-preview_top-left-title-span">
-                <ShadowTitle type="h2">
-                  Profit and Freedom for Crypto World
-                </ShadowTitle>
-              </span>
-              <span className="h-preview_top-left-title-span big">
-                <ShadowTitle type="h2">
-                  BOTSWAP: Dive deeper into the Crypto World
-                </ShadowTitle>
-              </span>
-              {/* <span className="h-preview_top-left-title-span">
-                <ShadowTitle type="h2">
-                  Multichain DEX
-                </ShadowTitle>
-              </span>
-              <span className="h-preview_top-left-title-span">
-                <ShadowTitle type="h2">
-                  with quick and low-fee transactions
-                </ShadowTitle>
-              </span> */}
+              </ShadowTitle>
+              <ShadowTitle type="h2">
+                Multichain DEX with quick and low-fee transactions
+              </ShadowTitle>
             </div>
             <div className="h-preview_top-left_subtitle">
-              Discover the next level of Farming and Staking on BotSwap!
+              Use farming and staking as additional functions of our DEX.
             </div>
             <Button
               link="/trade/swap"
-              className="h-preview_top-left_btn btn-hover-down"
+              className="h-preview_top-left_btn"
               colorScheme="pink"
-              size="smd"
+              size="sm"
             >
               Trade Now
             </Button>
@@ -152,7 +130,7 @@ const Preview: VFC<{ priceBotData: PriceBotData | null }> = observer(({ priceBot
         </div>
         <div className="h-preview_slides">
           <Swiper
-            slidesPerView={isUltraWide ? 4 : isWide ? 3 : isMobile ? 2 : 1}
+            slidesPerView={isWide ? 3 : 1}
             spaceBetween={10}
             className="h-preview_slides_body"
             keyboard
@@ -163,39 +141,23 @@ const Preview: VFC<{ priceBotData: PriceBotData | null }> = observer(({ priceBot
           >
             {blogs.length
               ? blogs.map(({ post_link, image_link }) => (
-                <SwiperSlide key={uuid()}>
-                  <div className="h-preview_slides_top_item">
-                    <a href={post_link} target="_blank" rel="noreferrer">
-                      <span>
+                  <SwiperSlide key={uuid()}>
+                    <div className="h-preview_slides_top_item">
+                      <a href={post_link} target="_blank" rel="noreferrer">
                         <img src={image_link} alt="slide" />
-                      </span>
-                      <span>
-                        Benefits of using Binance Smart Chain over Ethereum for Bot Planet NFT.
-                      </span>
-                      <span>
-                        Read more
-                      </span>
-                    </a>
-                  </div>
-                </SwiperSlide>
-              ))
+                      </a>
+                    </div>
+                  </SwiperSlide>
+                ))
               : slides.map(({ img }) => (
-                <SwiperSlide key={uuid()}>
-                  <div className="h-preview_slides_top_item">
-                    <a href="https://google.com" target="_blank" rel="noreferrer">
-                      <span>
+                  <SwiperSlide key={uuid()}>
+                    <div className="h-preview_slides_top_item">
+                      <a href="https://google.com" target="_blank" rel="noreferrer">
                         <img src={img} alt="slide" />
-                      </span>
-                      <span className="h-preview_slides_top_item-title">
-                        Benefits of using Binance Smart Chain over Ethereum for Bot Planet NFT.
-                      </span>
-                      <span className="h-preview_slides_top_item-more">
-                        Read more
-                      </span>
-                    </a>
-                  </div>
-                </SwiperSlide>
-              ))}
+                      </a>
+                    </div>
+                  </SwiperSlide>
+                ))}
           </Swiper>
         </div>
       </div>
